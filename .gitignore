@@ -280,3 +280,6 @@ fabric.properties
 config/
 !config/sample-*
 log/
+
+# Ignore Gradle build output directory
+build
