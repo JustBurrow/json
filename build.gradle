@@ -49,20 +49,19 @@ subprojects {
     dependencies {
       dependency 'kr.lul.common:common-util:0.0.1.SNAPSHOT'
       dependency 'org.apache.commons:commons-lang3:3.9'
-      dependency 'org.codehaus.groovy:groovy:2.5.13'
-      dependency 'org.spockframework.spock:spock-core:2.0-M3-groovy-3.0'
-      dependency 'org.spockframework.spock:spock-spring:2.0-M3-groovy-3.0'
+      dependency 'org.codehaus.groovy:groovy-all:2.5.7'
+      dependency 'org.spockframework:spock-spring:1.2-groovy-2.5'
     }
   }
 
   dependencies {
     testImplementation 'kr.lul.common:common-util'
+    testImplementation 'org.apache.commons:commons-lang3'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
       exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
-    testImplementation 'org.codehaus.groovy:groovy'
-    testImplementation 'org.spockframework.spock:spock-core'
-    testImplementation 'org.spockframework.spock:spock-spring'
+    testImplementation 'org.codehaus.groovy:groovy-all'
+    testImplementation 'org.spockframework:spock-spring'
   }
 
   test {
