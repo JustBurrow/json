@@ -20,6 +20,19 @@ public class JsonStringImpl implements JsonString {
   }
 
   @Override
+  public int hashCode() {
+    return this.value.hashCode();
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    JsonStringImpl that = (JsonStringImpl) o;
+    return this.value.equals(that.value);
+  }
+
+  @Override
   public String toString() {
     return this.value;
   }
