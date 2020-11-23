@@ -38,6 +38,5 @@ class JsonArrayImplSpec extends Specification {
     [new JsonBooleanImpl(true)]                          || [new JsonBooleanImpl(true)].toArray()                          | [new JsonBooleanImpl(true)]
     [new JsonBooleanImpl(false), new JsonStringImpl("")] || [new JsonBooleanImpl(false), new JsonStringImpl("")].toArray() | [new JsonBooleanImpl(false), new JsonStringImpl("")]
     [new JsonStringImpl(""), new JsonNumberImpl(1)]      || [new JsonStringImpl(""), new JsonNumberImpl(1)].toArray()      | [new JsonStringImpl(""), new JsonNumberImpl(1)]
-    [new JsonArrayImpl([])]                              || (JsonValue[]) [(List<JsonValue>) []]                           | [new JsonArrayImpl()]
   }
 }
